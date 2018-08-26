@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts 
+Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="aUTREPCMForm" type="form.AutrepcmForm" />
+	</form-beans>
+	<action-mappings>
+		<action input="/Error.jsp" name="aUTREPCMForm"
+			 path="/register" scope="request" type="action.AutrepcmAction">
+			<forward name="register" path="/Register.jsp"></forward>
+			<forward name="addedSuccess" path="/AddSuccess.jsp"></forward>
+			<forward name="comeback" path="/EmulatorAVX2_AUTA431.jsp"></forward>
+			<forward name="error" path="/Error.jsp"></forward>
+
+		</action>
+	</action-mappings>
+	<message-resources parameter="action.ApplicationResources" />
+</struts-config>
